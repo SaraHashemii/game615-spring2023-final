@@ -16,7 +16,9 @@ public class PlayerMovementController : MonoBehaviour
     private Vector3 moveDirection = Vector3.zero;
 
     private CharacterController cc;
+
     [SerializeField] AudioSource runningSound;
+   
 
     [Header("Gravity")]
     [SerializeField] private float gravity;
@@ -40,7 +42,7 @@ public class PlayerMovementController : MonoBehaviour
         GetRefrences();
         InitialVariables();
 
-
+    
 
     }
 
@@ -80,6 +82,7 @@ public class PlayerMovementController : MonoBehaviour
 
 
         cc.Move(moveDirection * moveSpeed * Time.deltaTime);
+       
     }
 
     private void HandleRunning()
