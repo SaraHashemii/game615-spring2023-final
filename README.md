@@ -3,7 +3,7 @@
  
 
 ## Attributions:<br>
-1.Contains music ©2020 Joshua McLean (https://joshua-mclean.itch.io) Licensed under Creative Commons Attribution 4.0 International<br>  (Smallheart / 4-4 musicbox / off-kilter scene or creepy vibes 120bpm / loop 0:00.00)  
+1. Contains music ©2020 Joshua McLean (https://joshua-mclean.itch.io) Licensed under Creative Commons Attribution 4.0 International<br>  (Smallheart / 4-4 musicbox / off-kilter scene or creepy vibes 120bpm / loop 0:00.00)  
 #### This game uses these sounds from freesound:<br>
 2. [“Fresh and light snowfall”](https://freesound.org/people/florianreichelt/sounds/455929/) by [florianreichelt](https://freesound.org/people/florianreichelt/ ), License: Creative Commons 0 <br>
 3. [“Short Gunshot.wav”](https://freesound.org/people/JohanDeecke/sounds/369528/) by                                   [JohanDeecke](https://freesound.org/people/JohanDeecke/), License: Attribution 3.0 <br>
