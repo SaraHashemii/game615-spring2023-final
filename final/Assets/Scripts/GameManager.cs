@@ -24,31 +24,37 @@ public class GameManager : MonoBehaviour
         HandleGameScene();
     }
 
-    //public void QuitButton()
-    //{
-    //    HandleQuit();
-    //}
-
-    public void HandleEndScene()
+    public void QuitButton()
     {
-        SceneManager.LoadScene(1);
-        Cursor.lockState = CursorLockMode.None;
+        HandleQuit();
     }
 
-    public void HandleMainMenuScene()
+    public void HandleEndScene()
     {
         SceneManager.LoadScene(2);
         Cursor.lockState = CursorLockMode.None;
     }
 
-    public void HandleGameScene()
+    public void HandleMainMenuScene()
     {
         SceneManager.LoadScene(0);
+        Cursor.lockState = CursorLockMode.None;
+    }
+
+    public void HandleGameScene()
+    {
+        SceneManager.LoadScene(1);
         Cursor.lockState = CursorLockMode.Locked;
     }
 
-    //public void HandleQuit()
-    //{
+    public void HandleVictoryScene()
+    {
+        SceneManager.LoadScene(3);
+        Cursor.lockState = CursorLockMode.Locked;
+    }
 
-    //}
+    public void HandleQuit()
+    {
+        Application.Quit();
+    }
 }
