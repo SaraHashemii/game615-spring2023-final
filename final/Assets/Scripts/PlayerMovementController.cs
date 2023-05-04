@@ -142,4 +142,6 @@ public class PlayerMovementController : MonoBehaviour
             anim.SetFloat("Speed", 0.5f, 0.2f, Time.deltaTime);
         }
     }
+
+
 }

@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
+    [SerializeField] GameManager gm;
+    //[SerializeField]  UIManager uiManager;
+
+
     public enum spawnerStatus { spawning, waiting, counting };
 
     [SerializeField] private Transform[] spawner;
@@ -97,9 +101,19 @@ public class EnemySpawner : MonoBehaviour
 
         if (currentWave + 1 > wavesnumber.Length - 1)
         {
-            currentWave = 0;
+           
             Debug.Log("completed all the waves");
-            //end the game
+
+            if (enemiesAreDead())
+            {
+                StartCoroutine(CompleteWaveCoroutine());
+
+            }
+            else
+            {
+                Debug.Log("All waves completed, but some enemies are still alive.");
+            }
+            currentWave = 0;
         }
         else
         {
@@ -125,4 +139,19 @@ public class EnemySpawner : MonoBehaviour
         }
         return true;
     }
+
+    private IEnumerator CompleteWaveCoroutine()
+    {
+        status = spawnerStatus.counting;
+        waveConutdown = wavesSleepTime;
+
+        // Wait for a short delay before triggering victory scene
+        yield return new WaitForSeconds(5f);
+
+        // Trigger victory scene
+        gm.HandleVictoryScene();
+
+        currentWave = 0;
+    }
+
 }

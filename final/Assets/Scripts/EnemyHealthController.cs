@@ -6,6 +6,7 @@ public class EnemyHealthController : HealthManager
 {
     private EnemyUIController enemyUIController;
     [SerializeField] GameObject collectable;
+    //[SerializeField] ParticleSystem collectableParticle;
 
     public float attackSpeed;
 

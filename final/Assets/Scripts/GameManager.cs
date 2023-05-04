@@ -49,12 +49,15 @@ public class GameManager : MonoBehaviour
 
     public void HandleVictoryScene()
     {
+        
         SceneManager.LoadScene(3);
-        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.lockState = CursorLockMode.None;
     }
 
     public void HandleQuit()
     {
         Application.Quit();
     }
+
+
 }
