@@ -9,15 +9,19 @@ public class EnemyMovementController : MonoBehaviour
     private NavMeshAgent agent = null;
     private Transform target;
     private float distanceToPlayer;
-
-    [SerializeField] private float LastAttackTime = 0f;
     private bool hasStopped = false;
 
+    [SerializeField] private float LastAttackTime = 0f;
+    [SerializeField] private AudioSource attackAudio;
+    [SerializeField] private ParticleSystem attackParticle;
+
     private EnemyHealthController enemyHealthController = null;
+
 
     private void Start()
     {
         GetRefrences();
+        this.attackAudio.playOnAwake = false;
     }
 
     private void Update()
@@ -54,16 +58,15 @@ public class EnemyMovementController : MonoBehaviour
                     LastAttackTime = Time.time;
                 }
 
-                //Attack
-
-
                 if (Time.time >= LastAttackTime + enemyHealthController.attackSpeed)
                 {
                     LastAttackTime = Time.time;
                     HealthManager targetHealth = target.GetComponent<HealthManager>();
                     AttackPlayer(targetHealth);
+                    attackAudio.Play();
+                    Vector3 particleSpawnPos = new Vector3(this.transform.position.x, this.transform.position.y + .85f, this.transform.position.z);
+                    Instantiate(attackParticle, particleSpawnPos, this.transform.rotation);
                 }
-
 
             }
             else
