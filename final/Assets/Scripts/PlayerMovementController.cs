@@ -17,8 +17,6 @@ public class PlayerMovementController : MonoBehaviour
 
     private CharacterController cc;
 
-    [SerializeField] AudioSource runningSound;
-   
 
     [Header("Gravity")]
     [SerializeField] private float gravity;
@@ -29,6 +27,9 @@ public class PlayerMovementController : MonoBehaviour
 
     [Header("Animations")]
     private Animator anim;
+
+    [Header("Sound")]
+    [SerializeField] AudioSource runningSound;
 
     public void Awake()
     {
@@ -42,7 +43,7 @@ public class PlayerMovementController : MonoBehaviour
         GetRefrences();
         InitialVariables();
 
-    
+
 
     }
 
@@ -82,7 +83,7 @@ public class PlayerMovementController : MonoBehaviour
 
 
         cc.Move(moveDirection * moveSpeed * Time.deltaTime);
-       
+
     }
 
     private void HandleRunning()
@@ -142,6 +143,8 @@ public class PlayerMovementController : MonoBehaviour
             anim.SetFloat("Speed", 0.5f, 0.2f, Time.deltaTime);
         }
     }
+
+
 
 
 }
