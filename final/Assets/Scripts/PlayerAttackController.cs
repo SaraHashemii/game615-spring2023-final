@@ -22,7 +22,7 @@ public class PlayerAttackController : MonoBehaviour
     private void Start()
     {
         mainCamera = GetComponentInChildren<Camera>();
-        
+        //this.gunShotSound.playOnAwake = false;
 
     }
 
