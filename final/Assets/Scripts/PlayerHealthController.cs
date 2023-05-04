@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealthController : HealthManager
 {
     private PlayerUIController playerUIController;
+    [SerializeField] GameManager gm;
 
     [SerializeField] private int damage;
 
@@ -20,7 +22,7 @@ public class PlayerHealthController : HealthManager
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     public override void InitialVariables()
     {
@@ -29,13 +31,19 @@ public class PlayerHealthController : HealthManager
         isDead = false;
         damage = 1;
 
-        //attackSpeed = 2f;
-        //canAttack = true;
+       
     }
 
     public override void CheckHealth()
     {
         base.CheckHealth();
         playerUIController.UpdateHealthBar(health, healthMax);
+    }
+
+    public override void Die()
+    {
+        base.Die();
+        gm.HandleEndScene();
+       
     }
 }

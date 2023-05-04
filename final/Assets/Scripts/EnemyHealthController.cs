@@ -32,7 +32,7 @@ public class EnemyHealthController : HealthManager
         damage = 5;
 
         attackSpeed = 1.5f;
-        //canAttack = true;
+       
     }
 
 
