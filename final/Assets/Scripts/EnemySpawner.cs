@@ -95,13 +95,12 @@ public class EnemySpawner : MonoBehaviour
 
     private void CompeleteWave()
     {
-        status = spawnerStatus.counting;
-        waveConutdown = wavesSleepTime;
+
 
 
         if (currentWave + 1 > wavesnumber.Length - 1)
         {
-           
+
             Debug.Log("completed all the waves");
 
             if (enemiesAreDead())
@@ -146,7 +145,7 @@ public class EnemySpawner : MonoBehaviour
         waveConutdown = wavesSleepTime;
 
         // Wait for a short delay before triggering victory scene
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(12f);
 
         // Trigger victory scene
         gm.HandleVictoryScene();
