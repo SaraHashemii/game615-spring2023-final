@@ -4,12 +4,21 @@ using UnityEngine;
 
 public class PlayerUIController : MonoBehaviour
 {
-    [SerializeField] private UIManager healthBar;
+    [SerializeField] private UIManager uiManager;
+
+   
 
 
     public void UpdateHealthBar(int current, int max)
     {
-        healthBar.SetValues(current, max);
+        uiManager.SetValuesToHealthBar(current, max);
+
+    }
+
+
+    public void UpdateScore(int score)
+    {
+        uiManager.SetValueToScore(score);
 
     }
 }

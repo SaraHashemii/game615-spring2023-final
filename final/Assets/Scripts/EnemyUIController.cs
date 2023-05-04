@@ -8,7 +8,7 @@ public class EnemyUIController : MonoBehaviour
 
     public void UpdateHealthBar(int current, int max)
     {
-        healthBar.SetValues(current, max);
+        healthBar.SetValuesToHealthBar(current, max);
 
     }
 }

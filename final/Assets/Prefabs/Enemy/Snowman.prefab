@@ -270,6 +270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f82a55354f66482eab1d21fed1fe280, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LastAttackTime: 0
 --- !u!114 &1487490821556522550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -285,6 +286,9 @@ MonoBehaviour:
   health: 0
   healthMax: 0
   isDead: 0
+  collectable: {fileID: 2103762067845016094, guid: 11637beb32c604e678f2b4398241238c, type: 3}
+  attackSpeed: 0
+  canAttack: 0
   damage: 0
 --- !u!114 &848502210426413928
 MonoBehaviour:
