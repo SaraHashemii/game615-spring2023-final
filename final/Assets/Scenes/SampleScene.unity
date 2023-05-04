@@ -2445,7 +2445,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireParticle: {fileID: 1312326421}
   hitParticle: {fileID: 8162942065790969341, guid: ff638f4949e7345218e2943d5ad82597, type: 3}
-  gunRange: 15
+  gunRange: 10
   fireRate: 0.3
   LastShootTime: 0
   damage: 1
@@ -2465,7 +2465,7 @@ MonoBehaviour:
   health: 0
   healthMax: 0
   isDead: 0
-  gm: {fileID: 0}
+  gm: {fileID: 1594372683}
   damage: 0
 --- !u!114 &380772788
 MonoBehaviour:
@@ -3178,8 +3178,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -0.000030517578, y: 2.4}
-  m_SizeDelta: {x: 290, y: 145}
+  m_AnchoredPosition: {x: -0.000030517578, y: -10.902}
+  m_SizeDelta: {x: 290, y: 47.168}
   m_Pivot: {x: -0.00000009313226, y: 0.7688635}
 --- !u!114 &484699469
 MonoBehaviour:
@@ -3194,14 +3194,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.10484158, g: 0.2063716, b: 0.7169812, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2484d80cee4a9481fac63dfc16179179, type: 3}
+  m_Sprite: {fileID: 21300294, guid: 7a90fcdada22c9b429479d5933a03692, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3367,7 +3367,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &509351879 stripped
 Transform:
@@ -6105,8 +6105,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1.4816895, y: 0.000015258789}
-  m_SizeDelta: {x: 2.967, y: -3.6182}
+  m_AnchoredPosition: {x: 1.0701904, y: -0.6380997}
+  m_SizeDelta: {x: -12.3513, y: -15.1055}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1015130641
 MonoBehaviour:
@@ -6121,14 +6121,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5990566, g: 1, b: 0.6618754, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6caa12463774143ccbb758617e7b2f9a, type: 3}
+  m_Sprite: {fileID: 21300126, guid: 7a90fcdada22c9b429479d5933a03692, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8318,7 +8318,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1596924734
 PrefabInstance:
@@ -10563,7 +10563,7 @@ RectTransform:
   - {fileID: 406673621}
   - {fileID: 146446006}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
