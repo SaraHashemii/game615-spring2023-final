@@ -5,14 +5,12 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] GameManager gm;
-    //[SerializeField]  UIManager uiManager;
 
-
-    public enum spawnerStatus { spawning, waiting, counting };
+    public enum spawnerStatus { spawning, waiting, counting, done };
 
     [SerializeField] private Transform[] spawner;
     [SerializeField] private List<HealthManager> enemyList;
-    [SerializeField] private GameObject snowman;
+
 
     [SerializeField] private WaveManager[] wavesnumber;
     [SerializeField] private float wavesSleepTime = 3f;
@@ -47,8 +45,9 @@ public class EnemySpawner : MonoBehaviour
 
         if (waveConutdown <= 0)
         {
-            if (status != spawnerStatus.spawning)
+            if (status != spawnerStatus.spawning && status != spawnerStatus.done)
             {
+                Debug.Log(" wave: " + currentWave);
                 StartCoroutine(SpawnNewWave(wavesnumber[currentWave]));
             }
         }
@@ -95,13 +94,15 @@ public class EnemySpawner : MonoBehaviour
 
     private void CompeleteWave()
     {
-
-
+        status = spawnerStatus.counting;
+        waveConutdown = wavesSleepTime;
 
         if (currentWave + 1 > wavesnumber.Length - 1)
         {
 
             Debug.Log("completed all the waves");
+            status = spawnerStatus.done;
+
 
             if (enemiesAreDead())
             {
@@ -109,15 +110,12 @@ public class EnemySpawner : MonoBehaviour
                 StartCoroutine(CompleteWaveCoroutine());
 
             }
-            else
-            {
-                Debug.Log("All waves completed, but some enemies are still alive.");
-            }
-            currentWave = 0;
+
         }
         else
         {
             currentWave++;
+
         }
 
 
@@ -142,8 +140,6 @@ public class EnemySpawner : MonoBehaviour
 
     private IEnumerator CompleteWaveCoroutine()
     {
-        status = spawnerStatus.counting;
-        waveConutdown = wavesSleepTime;
 
         // Wait for a short delay before triggering victory scene
         yield return new WaitForSeconds(12f);
@@ -151,7 +147,7 @@ public class EnemySpawner : MonoBehaviour
         // Trigger victory scene
         gm.HandleVictoryScene();
 
-        currentWave = 0;
+
     }
 
 }
