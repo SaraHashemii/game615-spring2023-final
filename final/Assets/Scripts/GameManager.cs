@@ -24,10 +24,6 @@ public class GameManager : MonoBehaviour
         HandleGameScene();
     }
 
-    public void QuitButton()
-    {
-        HandleQuit();
-    }
 
     public void HandleEndScene()
     {
@@ -49,15 +45,12 @@ public class GameManager : MonoBehaviour
 
     public void HandleVictoryScene()
     {
-        
+
         SceneManager.LoadScene(3);
         Cursor.lockState = CursorLockMode.None;
     }
 
-    public void HandleQuit()
-    {
-        Application.Quit();
-    }
+
 
 
 }

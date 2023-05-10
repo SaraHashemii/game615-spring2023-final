@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyHealthController : HealthManager
 {
-    private EnemyUIController enemyUIController;
+
     [SerializeField] GameObject collectable;
     //[SerializeField] ParticleSystem collectableParticle;
 
@@ -17,13 +17,12 @@ public class EnemyHealthController : HealthManager
     public void Start()
     {
         InitialVariables();
-        enemyUIController = GetComponent<EnemyUIController>();
     }
 
     public override void CheckHealth()
     {
         base.CheckHealth();
-        // enemyUIController.UpdateHealthBar(health, healthMax);
+
     }
 
     public override void InitialVariables()

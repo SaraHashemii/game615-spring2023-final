@@ -105,6 +105,7 @@ public class EnemySpawner : MonoBehaviour
 
             if (enemiesAreDead())
             {
+                Debug.Log("Start counting");
                 StartCoroutine(CompleteWaveCoroutine());
 
             }

@@ -16,6 +16,7 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] private Image fillImg;
 
+
     public void Start()
     {
         playerScore.text = "Score: " + ScoreCount.ToString();

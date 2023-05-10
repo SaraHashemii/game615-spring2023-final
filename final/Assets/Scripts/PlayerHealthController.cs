@@ -10,6 +10,7 @@ public class PlayerHealthController : HealthManager
 
     [SerializeField] private int damage;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,11 +20,7 @@ public class PlayerHealthController : HealthManager
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+ 
     public override void InitialVariables()
     {
         healthMax = 50;
@@ -31,7 +28,7 @@ public class PlayerHealthController : HealthManager
         isDead = false;
         damage = 1;
 
-       
+
     }
 
     public override void CheckHealth()
@@ -44,6 +41,6 @@ public class PlayerHealthController : HealthManager
     {
         base.Die();
         gm.HandleEndScene();
-       
+
     }
 }

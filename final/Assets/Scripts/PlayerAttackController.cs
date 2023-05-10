@@ -22,7 +22,7 @@ public class PlayerAttackController : MonoBehaviour
     private void Start()
     {
         mainCamera = GetComponentInChildren<Camera>();
-        //this.gunShotSound.playOnAwake = false;
+       
 
     }
 
@@ -52,8 +52,7 @@ public class PlayerAttackController : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, gunRange))
         {
-            Debug.Log(hit.transform.name);
-
+           
             EnemyHealthController enemyHealthStatus = hit.transform.GetComponent<EnemyHealthController>();
             if (enemyHealthStatus != null)
             {
