@@ -10,6 +10,7 @@ Shift = run<br>
 mouse = camera<br>
 left click = shoot<br>
 
+[Playable link to Game](https://SaraHashemii.github.io/game615-spring2023-final/final/play/)
 
 ## Attributions:<br>
 1. Contains music ©2020 Joshua McLean (https://joshua-mclean.itch.io) Licensed under Creative Commons Attribution 4.0 International<br>  (Smallheart / 4-4 musicbox / off-kilter scene or creepy vibes 120bpm / loop 0:00.00)  
