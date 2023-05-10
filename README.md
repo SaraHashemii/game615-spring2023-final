@@ -2,7 +2,7 @@
  Sara <br>
 
 **Title:** Abandoned in the Snow<br>
-**Game Objectives:** kill all snowmen and collect the carrots to survive.<br>
+**Game Objectives:** kill all snowmen and collect as many carrots as you can to survive.<br>
 
 **Game controls:**<br>
 W,A,S,D = move<br>
