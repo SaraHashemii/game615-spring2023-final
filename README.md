@@ -1,5 +1,4 @@
 # game615-spring2023-final
- Sara <br>
 
 **Title:** Abandoned in the Snow<br>
 **Game Objectives:** kill all snowmen and collect as many carrots as you can to survive.<br>
